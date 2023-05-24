@@ -9,8 +9,8 @@ public class GraZaDuzoZaMalo {
     private Scanner scanner;
     private int liczbaWylosowanaPrzezKomputer;
 
-    public GraZaDuzoZaMalo(Scanner scanner, int liczbaWylosowanaPrzezKomputer) {
-        this.scanner = scanner;
+    public GraZaDuzoZaMalo() {
+        this.scanner = new Scanner(System.in);
         this.liczbaWylosowanaPrzezKomputer = getLiczbaWylosowanaPrzezKomputer();
     }
 
