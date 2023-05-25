@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class GraZaDuzoZaMalo {
 
-    private Scanner scanner;
+    private final Scanner scanner;
     private int liczbaWylosowanaPrzezKomputer;
 
     public GraZaDuzoZaMalo() {
@@ -26,17 +26,10 @@ public class GraZaDuzoZaMalo {
             liczbaUzytkownika = scanner.nextInt();
 
             switch (Integer.compare(liczbaUzytkownika, liczbaWylosowanaPrzezKomputer)) {
-                case 1:
-                    System.out.println("Za dużo!");
-                    break;
-                case -1:
-                    System.out.println("Za mało!");
-                    break;
-                default:
-                    System.out.println("Bingo! Zgadłeś!");
-                    break;
+                case 1 -> System.out.println("Za dużo!");
+                case -1 -> System.out.println("Za mało!");
+                default -> System.out.println("Bingo! Zgadłeś!");
             }
-
         } while (liczbaUzytkownika != liczbaWylosowanaPrzezKomputer);
     }
 
