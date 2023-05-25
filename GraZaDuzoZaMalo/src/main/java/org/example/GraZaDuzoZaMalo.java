@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class GraZaDuzoZaMalo {
 
-    private int liczbaUzytkownika;
     private Scanner scanner;
     private int liczbaWylosowanaPrzezKomputer;
 
@@ -19,9 +18,9 @@ public class GraZaDuzoZaMalo {
         liczbaWylosowanaPrzezKomputer = random.nextInt(101);
         return liczbaWylosowanaPrzezKomputer;
     }
-
     public void zagrajWzaDuzoZaMalo() {
         System.out.println("Komputer wylosował liczbę z zakresu 0-100. Odgadnij ją!");
+        int liczbaUzytkownika;
         do {
             System.out.print("Podaj liczbę: ");
             liczbaUzytkownika = scanner.nextInt();
@@ -37,6 +36,7 @@ public class GraZaDuzoZaMalo {
                     System.out.println("Bingo! Zgadłeś!");
                     break;
             }
+
         } while (liczbaUzytkownika != liczbaWylosowanaPrzezKomputer);
     }
 
